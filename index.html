@@ -125,41 +125,54 @@
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">What I actually do</p>
-      <h2>Three disciplines, one delivery pipeline</h2>
-      <p>I am an iOS specialist by depth, but a product engineer by range. Below is an honest map of
-         where I write code, where I design systems, and where I set the process.</p>
+      <h2>An iOS specialist who can carry a whole product</h2>
+      <p>iOS is the depth — architecture, concurrency, memory and release. The rest exists so a product
+         can ship without waiting on someone else, not because I claim equal mastery of it.</p>
     </div>
 
     <div class="disciplines">
-      <article class="disc reveal">
+      <article class="disc disc--primary reveal" style="grid-column:1/-1">
         <div class="disc__icon" aria-hidden="true">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg>
         </div>
-        <h3>Mobile — the deep end</h3>
-        <p>Native iOS is where I go deepest: architecture, concurrency correctness, memory and the
-           release pipeline. I hold Android to screen-for-screen parity as a lead.</p>
-        <ul class="disc__list">
-          <li>Swift · SwiftUI · UIKit · MVVM · modular architecture</li>
-          <li>Swift Concurrency — actors, isolation, Sendable, task groups</li>
-          <li>Instruments profiling · memory &amp; data-race safety</li>
-          <li>AVFoundation · CoreBluetooth · Core ML · StoreKit</li>
-          <li>Kotlin / Jetpack · React Native (Expo) for cross-platform</li>
-        </ul>
+        <h3>Native iOS &mdash; the specialism</h3>
+        <p>Five years building iOS applications that had to survive real users, real load and real
+           release cycles. This is where I architect, where I profile, and where I am the person the
+           team escalates to.</p>
+        <div class="disc__cols">
+          <ul class="disc__list">
+            <li>Swift &middot; SwiftUI &middot; UIKit &middot; modular architecture &middot; MVVM</li>
+            <li>Swift Concurrency &mdash; async/await, actors, isolation, Sendable</li>
+            <li>Structured concurrency, task groups, AsyncSequence, continuations</li>
+            <li>Data-race and thread safety by design, not by retry</li>
+          </ul>
+          <ul class="disc__list">
+            <li>Instruments profiling &mdash; memory, leaks, network, hangs</li>
+            <li>Core Data &middot; AVFoundation &middot; Core ML &middot; StoreKit &middot; URLSession</li>
+            <li>CoreBluetooth / BLE and custom binary device protocols</li>
+            <li>Accessibility, Dynamic Type and localization as defaults</li>
+          </ul>
+          <ul class="disc__list">
+            <li>Fastlane &middot; GitHub Actions &middot; code signing &middot; provisioning</li>
+            <li>App Store Connect, TestFlight and review response</li>
+            <li>XCTest, unit and UI testing, crash triage with Crashlytics</li>
+            <li>Leading and reviewing a mobile team to one standard</li>
+          </ul>
+        </div>
       </article>
 
       <article class="disc reveal">
         <div class="disc__icon" aria-hidden="true">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
         </div>
-        <h3>Backend &amp; infrastructure</h3>
-        <p>I design the API and the schema the app talks to. Node and PostgreSQL end-to-end —
-           auth, payments, real-time events, migrations and deployment.</p>
+        <h3>Backend, when the product needs it</h3>
+        <p>I design and build the API my app talks to rather than waiting on one. Product scale, not
+           planet scale &mdash; and I am clear about that difference.</p>
         <ul class="disc__list">
-          <li>Node.js 20 (ESM) · Express · TypeScript · REST design</li>
-          <li>PostgreSQL — schema design, migrations, plain-SQL query layers</li>
-          <li>JWT / OTP auth · payment gateways · webhooks</li>
-          <li>Socket.IO real-time event layers · APNs / FCM push</li>
-          <li>Docker · AWS EC2 · Caddy · CI/CD with GitHub Actions</li>
+          <li>Node.js &middot; Express &middot; TypeScript &middot; REST design</li>
+          <li>PostgreSQL schema design and migrations</li>
+          <li>JWT / OTP auth &middot; payments &middot; webhooks &middot; push</li>
+          <li>Docker &middot; AWS &middot; CI/CD</li>
         </ul>
       </article>
 
@@ -168,14 +181,13 @@
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3m0-14-3 3m-8 8-3 3"/><circle cx="12" cy="12" r="3.2"/></svg>
         </div>
         <h3>AI engineering &amp; process</h3>
-        <p>I designed the AI development platform my team ships through, and the policy layer that
-           keeps AI-assisted changes reviewable, gated and build-verified.</p>
+        <p>I designed the AI development platform my team ships through, and the policy layer that keeps
+           AI-assisted changes reviewable and build-verified.</p>
         <ul class="disc__list">
-          <li>Multi-agent orchestration · role-scoped subagent design</li>
-          <li>Model Context Protocol (MCP) server integration</li>
-          <li>Agent memory design · context engineering · skill authoring</li>
-          <li>AI-assisted code review &amp; security auditing gates</li>
-          <li>Team leadership · sprint planning · code review · mentorship</li>
+          <li>Multi-agent orchestration &middot; role-scoped agents</li>
+          <li>Model Context Protocol (MCP) integration</li>
+          <li>Agent memory &middot; context engineering &middot; skills</li>
+          <li>AI-assisted review and security auditing gates</li>
         </ul>
       </article>
     </div>
@@ -688,67 +700,79 @@
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Capabilities</p>
-      <h2>What I know, and how well</h2>
-      <p>Bands are self-assessed against production use, not tutorials. Anything marked
-         <em>Expert</em> is something I have architected, debugged under pressure and taught to others.</p>
+      <h2>An iOS engineer, in detail</h2>
+      <p>iOS is the specialism; everything else exists to serve it. Bands are self-assessed against
+         production use, not tutorials — anything marked <em>Expert</em> is something I have architected,
+         debugged under pressure and taught to others.</p>
     </div>
 
     <div class="cap-groups">
 
-      <div class="cap-group reveal">
-        <h3>iOS &amp; Swift</h3>
+      <div class="cap-group cap-group--feature reveal" style="grid-column:1/-1">
+        <h3>Core iOS &mdash; where I go deepest</h3>
         <div class="cap"><div class="cap__row"><span class="cap__name">Swift &amp; SwiftUI</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="96"></div></div></div>
         <div class="cap"><div class="cap__row"><span class="cap__name">UIKit &amp; Auto Layout</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="93"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">Swift Concurrency &amp; actors</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="92"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">Modular architecture · MVVM · VIPER</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="94"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">Instruments · memory &amp; performance</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="88"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">Core ML · AVFoundation · CoreBluetooth</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="82"></div></div></div>
-        <div class="stack-cloud">
-          <span class="chip">Combine</span><span class="chip">Core Data</span><span class="chip">StoreKit</span><span class="chip">URLSession</span>
-          <span class="chip">Sendable</span><span class="chip">Task groups</span><span class="chip">AsyncSequence</span><span class="chip">GCD</span>
-          <span class="chip">VoiceOver</span><span class="chip">Dynamic Type</span><span class="chip">Localization</span>
-        </div>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Modular architecture &middot; MVVM &middot; VIPER</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="94"></div></div></div>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Instruments &middot; memory &amp; performance profiling</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="88"></div></div></div>
+        <div class="stack-cloud"><span class="chip">Core Data</span><span class="chip">AVFoundation</span><span class="chip">Core ML</span><span class="chip">URLSession</span><span class="chip">StoreKit / IAP</span><span class="chip">Combine</span><span class="chip">Accessibility &middot; VoiceOver</span><span class="chip">Dynamic Type</span><span class="chip">Localization</span><span class="chip">SOLID principles</span></div>
+      </div>
+
+      <div class="cap-group cap-group--feature reveal" style="grid-column:1/-1">
+        <h3>Concurrency &amp; performance &mdash; my specialism</h3>
+        <p class="cap-group__note">The area I am most often brought in for. Getting this wrong produces
+           the bugs that only appear in production, on someone else&rsquo;s device.</p>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Swift Concurrency &middot; async/await</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="94"></div></div></div>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Actors &middot; actor isolation &middot; @MainActor</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="92"></div></div></div>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Sendable &amp; data-race safety</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="90"></div></div></div>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Structured concurrency &middot; task groups</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="90"></div></div></div>
+        <div class="stack-cloud"><span class="chip">AsyncSequence</span><span class="chip">Continuations</span><span class="chip">Combine</span><span class="chip">Grand Central Dispatch</span><span class="chip">Thread safety</span><span class="chip">Xcode Instruments</span><span class="chip">Memory profiling</span><span class="chip">Crash triage</span></div>
       </div>
 
       <div class="cap-group reveal">
-        <h3>Backend &amp; data</h3>
-        <div class="cap"><div class="cap__row"><span class="cap__name">Node.js &amp; Express</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="86"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">PostgreSQL &amp; schema design</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="83"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">REST API design &amp; auth</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="88"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">TypeScript</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="80"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">Python</span><span class="cap__lvl">Working</span></div><div class="cap__bar"><div class="cap__fill" data-level="68"></div></div></div>
-        <div class="stack-cloud">
-          <span class="chip">JWT</span><span class="chip">Socket.IO</span><span class="chip">Webhooks</span><span class="chip">Docker</span>
-          <span class="chip">AWS EC2</span><span class="chip">Caddy</span><span class="chip">Migrations</span><span class="chip">Playwright</span><span class="chip">Pydantic</span>
-        </div>
+        <h3>Delivery &amp; release engineering</h3>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Fastlane &amp; GitHub Actions</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="92"></div></div></div>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Code signing &middot; provisioning</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="94"></div></div></div>
+        <div class="cap"><div class="cap__row"><span class="cap__name">App Store Connect &middot; TestFlight</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="94"></div></div></div>
+        <div class="stack-cloud"><span class="chip">Xcode</span><span class="chip">Swift Package Manager</span><span class="chip">CocoaPods</span><span class="chip">Release management</span><span class="chip">Git</span></div>
       </div>
 
       <div class="cap-group reveal">
-        <h3>Cross-platform &amp; front-end</h3>
-        <div class="cap"><div class="cap__row"><span class="cap__name">Kotlin / Android</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="78"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">React Native · Expo</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="80"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">React · Vite</span><span class="cap__lvl">Working</span></div><div class="cap__bar"><div class="cap__fill" data-level="74"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">HTML · CSS · design systems</span><span class="cap__lvl">Working</span></div><div class="cap__bar"><div class="cap__fill" data-level="72"></div></div></div>
-        <div class="stack-cloud">
-          <span class="chip">Jetpack Compose</span><span class="chip">Gradle</span><span class="chip">React Router v7</span>
-          <span class="chip">CSS Modules</span><span class="chip">Design tokens</span><span class="chip">Next.js</span>
-        </div>
-      </div>
-
-      <div class="cap-group reveal">
-        <h3>Delivery, quality &amp; AI</h3>
-        <div class="cap"><div class="cap__row"><span class="cap__name">CI/CD · Fastlane · GitHub Actions</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="92"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">Release &amp; code signing · App Store Connect</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="94"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">Multi-agent orchestration · MCP</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="90"></div></div></div>
+        <h3>Testing, quality &amp; leadership</h3>
+        <div class="cap"><div class="cap__row"><span class="cap__name">XCTest &middot; unit &amp; UI testing</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="84"></div></div></div>
         <div class="cap"><div class="cap__row"><span class="cap__name">Technical leadership &amp; mentorship</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="88"></div></div></div>
-        <div class="cap"><div class="cap__row"><span class="cap__name">XCTest · unit &amp; UI testing · TDD</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="82"></div></div></div>
-        <div class="stack-cloud">
-          <span class="chip">Crashlytics</span><span class="chip">Crash triage</span><span class="chip">Code review</span>
-          <span class="chip">Agile / Scrum</span><span class="chip">Context engineering</span><span class="chip">Security auditing</span><span class="chip">Git</span>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Code review &amp; standards</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="90"></div></div></div>
+        <div class="stack-cloud"><span class="chip">Test-driven development</span><span class="chip">Firebase Crashlytics</span><span class="chip">Agile / Scrum</span><span class="chip">System design</span></div>
+      </div>
+
+      <div class="cap-group reveal">
+        <h3>Integrations</h3>
+        <div class="cap"><div class="cap__row"><span class="cap__name">CoreBluetooth / BLE &middot; GATT</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="86"></div></div></div>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Real-time audio &amp; video &middot; Agora</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="88"></div></div></div>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Push &middot; APNs &amp; FCM</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="90"></div></div></div>
+        <div class="stack-cloud"><span class="chip">Socket.IO</span><span class="chip">REST APIs</span><span class="chip">Payment gateways</span><span class="chip">Binary protocols</span></div>
+      </div>
+
+      <div class="cap-group reveal">
+        <h3>AI engineering</h3>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Multi-agent orchestration &middot; MCP</span><span class="cap__lvl">Expert</span></div><div class="cap__bar"><div class="cap__fill" data-level="90"></div></div></div>
+        <div class="cap"><div class="cap__row"><span class="cap__name">Agent memory &amp; context engineering</span><span class="cap__lvl">Advanced</span></div><div class="cap__bar"><div class="cap__fill" data-level="88"></div></div></div>
+        <div class="stack-cloud"><span class="chip">Subagent &amp; skill design</span><span class="chip">AI-assisted code review</span><span class="chip">Security auditing</span></div>
+      </div>
+
+      <div class="cap-group cap-group--support reveal" style="grid-column:1/-1">
+        <h3>Supporting &mdash; useful, but not what you hire me for</h3>
+        <p class="cap-group__note">I build these when a product needs them end to end, and I review them
+           as a lead. A dedicated specialist will go deeper than I do, and I will say so.</p>
+        <div class="cap-support">
+          <div><span class="cap__name">Backend</span><span class="cap__lvl">Working &rarr; Advanced</span>
+            <div class="stack-cloud"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">PostgreSQL</span><span class="chip">REST design</span><span class="chip">JWT</span><span class="chip">Docker</span></div></div>
+          <div><span class="cap__name">Android</span><span class="cap__lvl">Working</span>
+            <div class="stack-cloud"><span class="chip">Kotlin</span><span class="chip">Jetpack</span><span class="chip">Gradle</span><span class="chip">Parity review</span></div></div>
+          <div><span class="cap__name">Cross-platform &amp; web</span><span class="cap__lvl">Working</span>
+            <div class="stack-cloud"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">React</span><span class="chip">TypeScript</span></div></div>
         </div>
       </div>
 
-    </div>
   </div>
 </section>
 

@@ -842,3 +842,51 @@ p { margin: 0; }
 
 /* Scope section: the limits column reads amber, not green */
 .disc--limits .disc__list li::before { color: var(--amber); }
+
+/* ---------- Capability groups: featured vs supporting ---------- */
+.cap-group--feature {
+  border-color: var(--accent-line);
+  background: linear-gradient(180deg, var(--accent-soft), var(--surface) 40%);
+}
+.cap-group--support { background: var(--bg-alt); }
+.cap-group--support .cap__name { display: block; font-size: 15px; margin-bottom: 2px; }
+.cap-group--support .cap__lvl { display: block; margin-bottom: var(--sp-3); }
+
+.cap-group__note {
+  color: var(--text-dim);
+  font-size: 14.5px;
+  margin: calc(-1 * var(--sp-3)) 0 var(--sp-5);
+  max-width: 68ch;
+}
+
+.cap-support {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--sp-5);
+}
+.cap-support .stack-cloud { margin-top: 0; }
+
+/* two featured groups read as one wide band on desktop */
+@media (min-width: 900px) {
+  .cap-group--feature .cap { max-width: 620px; }
+}
+
+/* "Beyond iOS" service reads as a footnote, not a headline offer */
+.svc--muted { background: var(--bg-alt); border-style: dashed; }
+.svc--muted:hover { border-color: var(--border-strong); transform: none; }
+.svc--muted .svc__num { color: var(--text-faint); }
+.svc--muted h3 { font-size: 16px; color: var(--text-dim); }
+
+/* iOS discipline card is the headline, not one of three equals */
+.disc--primary {
+  border-color: var(--accent-line);
+  background: linear-gradient(180deg, var(--accent-soft), var(--surface) 42%);
+}
+.disc--primary h3 { font-size: 21px; }
+.disc__cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--sp-4) var(--sp-6);
+  margin-top: var(--sp-5);
+}
+.disc__cols .disc__list { margin-top: 0; }
