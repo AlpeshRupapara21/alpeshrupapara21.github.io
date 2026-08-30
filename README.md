@@ -1,38 +1,32 @@
 # alpeshrupapara21.github.io
 
-Portfolio of **Alpesh Rupapara** — Senior Software Engineer & iOS Technical Lead.
+**Engineering profile of Alpesh Rupapara** — Senior Software Engineer & iOS Technical Lead.
 
-Two audiences, one design system:
+Live: <https://alpeshrupapara21.github.io/>
 
-| Page | URL | For |
-|---|---|---|
-| Engineering profile | https://alpeshrupapara21.github.io/ | Job applications — architecture depth, project specifications, capability matrix, experience |
-| Freelance | https://alpeshrupapara21.github.io/hire/ | Client enquiries — services, proof, process, engagement models |
+This is the profile used for **job applications**: employment history, project
+specifications, the AI development platform architecture, an iOS-first capability
+matrix and an honest statement of scope.
+
+The **freelance** profile is a separate project:
+<https://alpeshrupapara21.github.io/hire/> — [AlpeshRupapara21/hire](https://github.com/AlpeshRupapara21/hire)
 
 ## Design
 
 "The Engineering Record" — Swiss-technical dark. IBM Plex Sans + JetBrains Mono,
-near-black ground, single signal accent (green for hiring, amber for freelance via
-one CSS custom-property swap on `body.hire`).
+near-black ground, a single signal-green accent.
 
 ## Stack
 
 Hand-written HTML, CSS and JavaScript. **No framework, no build step, no dependencies.**
 Push to `main` and GitHub Pages serves it.
 
-```
-index.html          # hiring page
-hire/index.html     # freelance page
-assets/css/style.css
-assets/js/main.js   # sticky nav, scroll reveal, count-up, capability bars
-```
-
-Accessibility: skip link, visible focus rings, ARIA labels on icon controls,
-`prefers-reduced-motion` respected throughout, 44px minimum touch targets.
+Accessibility: every text pair ≥ 4.5:1 contrast, interactive targets ≥ 44px, skip
+link, visible focus rings, `prefers-reduced-motion` honoured, and a scroll safety
+net so no revealed content can strand at opacity 0.
 
 ## Local preview
 
 ```sh
-python3 -m http.server 8080
-# → http://localhost:8080
+python3 -m http.server 8080     # → http://localhost:8080
 ```

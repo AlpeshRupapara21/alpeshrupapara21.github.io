@@ -890,3 +890,18 @@ p { margin: 0; }
   margin-top: var(--sp-5);
 }
 .disc__cols .disc__list { margin-top: 0; }
+
+/* ---------- Non-iOS work: a footnote, never a headline ---------- */
+.disc-footnote,
+.svc-footnote {
+  margin-top: var(--sp-5);
+  padding: var(--sp-4) var(--sp-5);
+  border-left: 2px solid var(--border-strong);
+  background: var(--bg-alt);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--text-dim);
+  font-size: 14.5px;
+  max-width: 78ch;
+}
+.disc-footnote strong,
+.svc-footnote strong { color: var(--text); font-weight: 500; }
