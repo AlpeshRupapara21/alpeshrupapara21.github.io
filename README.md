@@ -8,9 +8,6 @@ This is the profile used for **job applications**: employment history, project
 specifications, the AI development platform architecture, an iOS-first capability
 matrix and an honest statement of scope.
 
-The **freelance** profile is a separate project:
-<https://alpeshrupapara21.github.io/hire/> — [AlpeshRupapara21/hire](https://github.com/AlpeshRupapara21/hire)
-
 ## Design
 
 "The Engineering Record" — Swiss-technical dark. IBM Plex Sans + JetBrains Mono,
