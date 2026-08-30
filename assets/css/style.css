@@ -905,3 +905,40 @@ p { margin: 0; }
 }
 .disc-footnote strong,
 .svc-footnote strong { color: var(--text); font-weight: 500; }
+
+/* ---------- "What I can build" grid ---------- */
+.buildtypes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--sp-4);
+}
+.bt {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  padding: var(--sp-5) var(--sp-6) var(--sp-6);
+  display: flex; flex-direction: column;
+  transition: border-color 220ms var(--ease), transform 220ms var(--ease);
+}
+.bt:hover { border-color: var(--accent-line); transform: translateY(-3px); }
+.bt h3 { font-size: 17px; letter-spacing: -0.02em; margin-bottom: var(--sp-3); }
+.bt p { color: var(--text-dim); font-size: 14.5px; }
+.bt__proof {
+  margin-top: auto; padding-top: var(--sp-4);
+  font-family: var(--font-mono);
+  font-size: 11.5px !important;
+  color: var(--accent-text) !important;
+  border-top: 1px solid var(--border);
+}
+.bt p + .bt__proof { margin-top: var(--sp-4); }
+
+/* store links inside the shipped-apps grid */
+.app__link { margin-top: var(--sp-3); display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+.app__link a {
+  font-family: var(--font-mono); font-size: 11.5px;
+  color: var(--accent-text);
+  padding-block: 10px;
+  display: inline-block;
+  transition: opacity 160ms var(--ease);
+}
+.app__link a:hover { opacity: 0.75; }
