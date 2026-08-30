@@ -839,3 +839,6 @@ p { margin: 0; }
   color: var(--text-faint);
   white-space: nowrap;
 }
+
+/* Scope section: the limits column reads amber, not green */
+.disc--limits .disc__list li::before { color: var(--amber); }

@@ -52,6 +52,7 @@
       <a href="#work">Work</a>
       <a href="#platform">AI Platform</a>
       <a href="#skills">Capabilities</a>
+      <a href="#scope">Scope</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
       <a class="nav__switch" href="hire/">Hire me freelance →</a>
@@ -187,14 +188,13 @@
     <div class="section-head reveal">
       <p class="eyebrow">Selected work</p>
       <h2>Projects, as specifications</h2>
-      <p>Eighteen projects — every application I have shipped, plus the platforms and libraries behind
-         them. Each entry states the role I held, the hard problem, what I actually built and the
-         measured result. Numbers come from the repositories and stores themselves, not estimates.</p>
+      <p>Fourteen applications and platforms built in the roles below. Each entry states what I owned,
+         the hard problem, what I actually built and the measured result — numbers come from the
+         repositories and stores themselves, not estimates. My independent projects live on the
+         <a href="hire/">freelance profile</a>.</p>
     </div>
 
     <div class="projects">
-
-      <!-- 01 Fancall -->
       <article class="proj reveal">
         <div class="proj__head">
           <span class="proj__idx mono">01</span>
@@ -229,8 +229,6 @@
           </div></div>
         </div>
       </article>
-
-      <!-- 02 Fancall Brain -->
       <article class="proj reveal">
         <div class="proj__head">
           <span class="proj__idx mono">02</span>
@@ -263,182 +261,9 @@
           </div></div>
         </div>
       </article>
-
-      <!-- 03 Dialbridge -->
       <article class="proj reveal">
         <div class="proj__head">
           <span class="proj__idx mono">03</span>
-          <div class="proj__title">
-            <h3>Dialbridge <span class="tag tag--oss">Public repos</span></h3>
-            <p class="proj__sub">B2B masked-calling platform — API, admin console and three client SDKs</p>
-          </div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Role</div>
-          <div class="spec__v"><strong>Architect and full-stack engineer.</strong> Designed the platform and authored all four repositories.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Problem</div>
-          <div class="spec__v">Bridge two real phone numbers so neither party sees the other's number — while the callee's phone rings as an ordinary cellular call, with no app and no internet on their side. And do it without the integrator's secret key ever reaching a mobile binary.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Built</div>
-          <div class="spec__v">A Node/TypeScript API with a React admin console, and a <strong>three-SDK client surface</strong>: iOS (Swift Package Manager), Android (Kotlin, OkHttp + coroutines, distributed via JitPack) and a Node server SDK. Security model is deliberate — the secret key stays server-side and mints <strong>short-lived client tokens</strong>; the app only ever holds a token. Prepaid wallet and call management included.</div>
-        </div>
-        <div class="spec spec--result">
-          <div class="spec__k">Result</div>
-          <div class="spec__v">A publishable SDK suite with documented install paths for SPM, Gradle/JitPack and npm — the kind of API surface a third-party developer can adopt without reading the source.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Stack</div>
-          <div class="spec__v"><div class="chips">
-            <span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">React</span><span class="chip">Swift / SPM</span>
-            <span class="chip">Kotlin</span><span class="chip">OkHttp</span><span class="chip">Coroutines</span><span class="chip">JitPack</span><span class="chip">Telephony</span>
-          </div></div>
-        </div>
-        <div class="proj__links">
-          <a href="https://github.com/AlpeshRupapara21/dialbridge" target="_blank" rel="noopener">Platform repository <span aria-hidden="true">→</span></a>
-          <a href="https://github.com/AlpeshRupapara21/dialbridge-ios-sdk" target="_blank" rel="noopener">iOS SDK <span aria-hidden="true">→</span></a>
-          <a href="https://github.com/AlpeshRupapara21/dialbridge-android-sdk" target="_blank" rel="noopener">Android SDK <span aria-hidden="true">→</span></a>
-          <a href="https://github.com/AlpeshRupapara21/dialbridge-node" target="_blank" rel="noopener">Node SDK <span aria-hidden="true">→</span></a>
-        </div>
-      </article>
-
-      <!-- 04 CallSieve -->
-      <article class="proj reveal">
-        <div class="proj__head">
-          <span class="proj__idx mono">04</span>
-          <div class="proj__title">
-            <h3>CallSieve <span class="tag tag--oss">Systems Swift</span></h3>
-            <p class="proj__sub">Ten million blocked numbers in a Call Directory extension, in 31 KB</p>
-          </div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Role</div>
-          <div class="spec__v"><strong>Author.</strong> Library, benchmark harness and documentation.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Problem</div>
-          <div class="spec__v">A <code class="mono">CXCallDirectoryExtension</code> is not an app — it is a short-lived process with a hard memory ceiling, and iOS kills it without explanation when it crosses the line. The obvious implementation, an <code class="mono">[Int64]</code> of every number, is <strong>76 MB of dirty resident memory</strong> at ten million entries. The error tells you nothing about why.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Built</div>
-          <div class="spec__v">A succinct, memory-mapped phone-number set in pure Swift with zero dependencies. The benchmark harness runs <strong>one child process per measurement</strong> — because <code class="mono">phys_footprint</code> never falls back after a large allocation, so measuring both paths in one process would contaminate the result — and cross-checks itself by XOR-ing every number read, so a blob that silently dropped entries could not produce a flattering number.</div>
-        </div>
-        <div class="spec spec--result">
-          <div class="spec__k">Result</div>
-          <div class="spec__v">76.28 MB → <strong>0.031 MB</strong> peak footprint at 10M clustered numbers — 10.7 bits per entry, 6.7M lookups/sec. The naive curve grows linearly; this one does not grow at all. That is a different curve, not a constant factor.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Stack</div>
-          <div class="spec__v"><div class="chips">
-            <span class="chip">Swift</span><span class="chip">CallKit</span><span class="chip">mmap</span>
-            <span class="chip">Succinct data structures</span><span class="chip">Benchmarking</span><span class="chip">Swift Package Manager</span>
-          </div></div>
-        </div>
-      </article>
-
-      <!-- 05 KisanSetu -->
-      <article class="proj reveal">
-        <div class="proj__head">
-          <span class="proj__idx mono">05</span>
-          <div class="proj__title">
-            <h3>KisanSetu <span class="tag tag--build">In development</span></h3>
-            <p class="proj__sub">B2B agritech marketplace — full-stack across five repositories</p>
-          </div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Role</div>
-          <div class="spec__v"><strong>Founder-engineer and full-stack architect.</strong> Backend, iOS, Android, web and the specification corpus.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Problem</div>
-          <div class="spec__v">A marketplace with three distinct actors — supplier, aggregation hub and buyer — needs one schema, one auth model and two mobile clients that never drift apart. Getting the data model wrong is expensive after launch, not before it.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Built</div>
-          <div class="spec__v">A Node.js 20 (ESM) + Express backend on PostgreSQL with a <strong>plain-SQL query layer and no ORM</strong>, phone + OTP authentication issuing JWTs, role-scoped access, and a migration/seed pipeline running against Postgres 16 in Docker. A SwiftUI iOS 17 client generated from an XcodeGen project spec, a Kotlin Android client held at screen-for-screen parity, and a marketing site. Written region-agnostic throughout — i18n, currency abstraction and E.164 phone handling from the first commit.</div>
-        </div>
-        <div class="spec spec--result">
-          <div class="spec__k">Result</div>
-          <div class="spec__v">A documented specification corpus of 20+ planning documents precedes the code, with cross-document conflicts resolved before implementation — a plan-before-code discipline I now apply by default.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Stack</div>
-          <div class="spec__v"><div class="chips">
-            <span class="chip">Node.js 20 ESM</span><span class="chip">Express</span><span class="chip">PostgreSQL 16</span><span class="chip">JWT</span>
-            <span class="chip">SwiftUI</span><span class="chip">XcodeGen</span><span class="chip">Kotlin</span><span class="chip">Docker</span>
-          </div></div>
-        </div>
-      </article>
-
-      <!-- 06 Arrow Rush -->
-      <article class="proj reveal">
-        <div class="proj__head">
-          <span class="proj__idx mono">06</span>
-          <div class="proj__title">
-            <h3>Arrow Rush <span class="tag">Cross-platform</span></h3>
-            <p class="proj__sub">Tap-away arrow puzzle for Android + iOS from one React Native codebase</p>
-          </div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Role</div>
-          <div class="spec__v">Engineer — gameplay, level generation, monetisation and the release pipeline.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Problem</div>
-          <div class="spec__v">Endless levels that are genuinely endless, but identical everywhere: the same level index must produce the same board on every device, without shipping level data or calling a server.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Built</div>
-          <div class="spec__v"><strong>Deterministic procedural level generation</strong> — levels are derived from the index, so every device sees an identical board with no content download. Path-clearance logic drives the core mechanic. Firebase Analytics and Crashlytics, AdMob monetisation, haptics and audio, plus <code class="mono">golden</code>, <code class="mono">rank</code> and <code class="mono">spin</code> verification scripts to prove generated levels remain solvable and fairly ranked.</div>
-        </div>
-        <div class="spec spec--result">
-          <div class="spec__k">Result</div>
-          <div class="spec__v">One TypeScript-strict codebase producing both store builds through EAS, with an Android App Bundle built and generated legal pages.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Stack</div>
-          <div class="spec__v"><div class="chips">
-            <span class="chip">React Native 0.81</span><span class="chip">Expo SDK 54</span><span class="chip">React 19</span>
-            <span class="chip">TypeScript (strict)</span><span class="chip">Firebase</span><span class="chip">AdMob</span><span class="chip">EAS Build</span>
-          </div></div>
-        </div>
-      </article>
-
-      <!-- 07 egun.in -->
-      <article class="proj reveal">
-        <div class="proj__head">
-          <span class="proj__idx mono">07</span>
-          <div class="proj__title">
-            <h3>egun.in <span class="tag">BLE hardware</span></h3>
-            <p class="proj__sub">Bluetooth Low Energy smart application with custom hardware integration</p>
-          </div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Role</div>
-          <div class="spec__v">iOS engineer — BLE transport layer and device integration. 54 commits across 2023–2026.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Problem</div>
-          <div class="spec__v">Talking to custom hardware over BLE means no SDK, no documentation you can trust, and a connection that drops for reasons the framework will not explain. Latency budgets are real and the packet format is yours to reverse and defend.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Built</div>
-          <div class="spec__v">CoreBluetooth central implementation with <strong>GATT service and characteristic discovery</strong>, notification subscription, and low-latency binary data-packet parsing against a custom device protocol — including reconnection and state-restoration handling.</div>
-        </div>
-        <div class="spec">
-          <div class="spec__k">Stack</div>
-          <div class="spec__v"><div class="chips">
-            <span class="chip">Swift</span><span class="chip">CoreBluetooth</span><span class="chip">GATT</span><span class="chip">Binary protocols</span><span class="chip">UIKit</span>
-          </div></div>
-        </div>
-      </article>
-
-      <!-- 08 FCIP -->
-      <article class="proj reveal">
-        <div class="proj__head">
-          <span class="proj__idx mono">08</span>
           <div class="proj__title">
             <h3>Creator Intelligence Platform <span class="tag">Internal tool</span></h3>
             <p class="proj__sub">Roster enrichment, document generation and outbound from one console</p>
@@ -459,11 +284,9 @@
           </div></div>
         </div>
       </article>
-
-      <!-- 09 Scraper -->
       <article class="proj reveal">
         <div class="proj__head">
-          <span class="proj__idx mono">09</span>
+          <span class="proj__idx mono">04</span>
           <div class="proj__title">
             <h3>Public Data Collector <span class="tag">Python</span></h3>
             <p class="proj__sub">Modular collection pipeline — scraping, parsing, storage and export</p>
@@ -484,11 +307,9 @@
           </div></div>
         </div>
       </article>
-
-      <!-- 10 FaceSense -->
       <article class="proj reveal">
         <div class="proj__head">
-          <span class="proj__idx mono">10</span>
+          <span class="proj__idx mono">05</span>
           <div class="proj__title">
             <h3>FaceSense <span class="tag">On-device AI</span></h3>
             <p class="proj__sub">Core ML facial recognition for attendance automation</p>
@@ -496,7 +317,7 @@
         </div>
         <div class="spec">
           <div class="spec__k">Role</div>
-          <div class="spec__v">Mobile application developer (iOS / AI) at Safe Pro AI Video Research Labs.</div>
+          <div class="spec__v">iOS / AI developer — on-device inference, the camera pipeline and the testing setup around it.</div>
         </div>
         <div class="spec">
           <div class="spec__k">Built</div>
@@ -510,16 +331,47 @@
     
       </article>
 
+      <div class="proj-group reveal">
+        <span class="proj-group__label">Independent freelance engagement</span>
+        <span class="proj-group__rule" aria-hidden="true"></span>
+        <span class="proj-group__note">Taken on outside employment</span>
+      </div>
+      <article class="proj reveal">
+        <div class="proj__head">
+          <span class="proj__idx mono">06</span>
+          <div class="proj__title">
+            <h3>egun.in <span class="tag">BLE hardware</span></h3>
+            <p class="proj__sub">Bluetooth Low Energy smart application with custom hardware integration</p>
+          </div>
+        </div>
+        <div class="spec">
+          <div class="spec__k">Role</div>
+          <div class="spec__v"><strong>Independent freelance engagement.</strong> Sole iOS engineer — BLE transport layer and device integration. 54 commits across 2023&ndash;2026.</div>
+        </div>
+        <div class="spec">
+          <div class="spec__k">Problem</div>
+          <div class="spec__v">Talking to custom hardware over BLE means no SDK, no documentation you can trust, and a connection that drops for reasons the framework will not explain. Latency budgets are real and the packet format is yours to reverse and defend.</div>
+        </div>
+        <div class="spec">
+          <div class="spec__k">Built</div>
+          <div class="spec__v">CoreBluetooth central implementation with <strong>GATT service and characteristic discovery</strong>, notification subscription, and low-latency binary data-packet parsing against a custom device protocol — including reconnection and state-restoration handling.</div>
+        </div>
+        <div class="spec">
+          <div class="spec__k">Stack</div>
+          <div class="spec__v"><div class="chips">
+            <span class="chip">Swift</span><span class="chip">CoreBluetooth</span><span class="chip">GATT</span><span class="chip">Binary protocols</span><span class="chip">UIKit</span>
+          </div></div>
+        </div>
+      </article>
 
       <div class="proj-group reveal">
         <span class="proj-group__label">Earlier production applications</span>
         <span class="proj-group__rule" aria-hidden="true"></span>
-        <span class="proj-group__note">Published to the App Store · 2021 — 2023</span>
+        <span class="proj-group__note">Published to the App Store &middot; 2021 &mdash; 2023</span>
       </div>
-
       <article class="proj reveal">
         <div class="proj__head">
-          <span class="proj__idx mono">11</span>
+          <span class="proj__idx mono">07</span>
           <div class="proj__title">
             <h3>MeyDan MarketPlace <span class="tag">E-commerce</span></h3>
             <p class="proj__sub">Full marketplace application delivered end-to-end</p>
@@ -527,7 +379,7 @@
         </div>
         <div class="spec">
           <div class="spec__k">Role</div>
-          <div class="spec__v">Mobile Developer (iOS) at DRC Systems — sole iOS engineer on the build.</div>
+          <div class="spec__v">iOS developer — <strong>sole engineer on the build</strong>, from first screen to store release.</div>
         </div>
         <div class="spec">
           <div class="spec__k">Built</div>
@@ -538,10 +390,9 @@
           <div class="spec__v"><div class="chips"><span class="chip">Swift</span><span class="chip">UIKit</span><span class="chip">REST APIs</span><span class="chip">Reactive state</span><span class="chip">App Store Connect</span><span class="chip">CI/CD</span></div></div>
         </div>
       </article>
-
       <article class="proj reveal">
         <div class="proj__head">
-          <span class="proj__idx mono">12</span>
+          <span class="proj__idx mono">08</span>
           <div class="proj__title">
             <h3>BagZag <span class="tag">Social commerce</span></h3>
             <p class="proj__sub">Social marketplace with scalable content feeds</p>
@@ -549,7 +400,7 @@
         </div>
         <div class="spec">
           <div class="spec__k">Role</div>
-          <div class="spec__v">Mobile Engineer (iOS) at Hyperlink InfoSystem.</div>
+          <div class="spec__v">iOS engineer — marketplace surfaces and the social feed architecture.</div>
         </div>
         <div class="spec">
           <div class="spec__k">Built</div>
@@ -560,10 +411,9 @@
           <div class="spec__v"><div class="chips"><span class="chip">Swift</span><span class="chip">UIKit</span><span class="chip">Auto Layout</span><span class="chip">REST APIs</span><span class="chip">Clean architecture</span></div></div>
         </div>
       </article>
-
       <article class="proj reveal">
         <div class="proj__head">
-          <span class="proj__idx mono">13</span>
+          <span class="proj__idx mono">09</span>
           <div class="proj__title">
             <h3>Kloto <span class="tag">Real-time chat</span></h3>
             <p class="proj__sub">Messaging application with live delivery</p>
@@ -571,7 +421,7 @@
         </div>
         <div class="spec">
           <div class="spec__k">Role</div>
-          <div class="spec__v">Mobile Engineer (iOS) at Hyperlink InfoSystem.</div>
+          <div class="spec__v">iOS engineer — the real-time messaging layer and its push delivery.</div>
         </div>
         <div class="spec">
           <div class="spec__k">Built</div>
@@ -582,10 +432,9 @@
           <div class="spec__v"><div class="chips"><span class="chip">Swift</span><span class="chip">UIKit</span><span class="chip">Real-time messaging</span><span class="chip">APNs</span><span class="chip">REST APIs</span></div></div>
         </div>
       </article>
-
       <article class="proj reveal">
         <div class="proj__head">
-          <span class="proj__idx mono">14</span>
+          <span class="proj__idx mono">10</span>
           <div class="proj__title">
             <h3>Grupem <span class="tag">Group platform</span></h3>
             <p class="proj__sub">Group engagement and coordination application</p>
@@ -593,7 +442,7 @@
         </div>
         <div class="spec">
           <div class="spec__k">Role</div>
-          <div class="spec__v">Mobile Engineer (iOS) at Hyperlink InfoSystem.</div>
+          <div class="spec__v">iOS engineer — group state, membership and shared activity surfaces.</div>
         </div>
         <div class="spec">
           <div class="spec__k">Built</div>
@@ -604,10 +453,9 @@
           <div class="spec__v"><div class="chips"><span class="chip">Swift</span><span class="chip">UIKit</span><span class="chip">REST APIs</span><span class="chip">Clean architecture</span></div></div>
         </div>
       </article>
-
       <article class="proj reveal">
         <div class="proj__head">
-          <span class="proj__idx mono">15</span>
+          <span class="proj__idx mono">11</span>
           <div class="proj__title">
             <h3>Prep-It <span class="tag">EdTech</span></h3>
             <p class="proj__sub">Interactive test-preparation engine</p>
@@ -615,7 +463,7 @@
         </div>
         <div class="spec">
           <div class="spec__k">Role</div>
-          <div class="spec__v">Mobile Engineer (iOS) at Hyperlink InfoSystem.</div>
+          <div class="spec__v">iOS engineer — the assessment engine, scoring and progress persistence.</div>
         </div>
         <div class="spec">
           <div class="spec__k">Built</div>
@@ -626,10 +474,9 @@
           <div class="spec__v"><div class="chips"><span class="chip">Swift</span><span class="chip">UIKit</span><span class="chip">Core Data</span><span class="chip">REST APIs</span></div></div>
         </div>
       </article>
-
       <article class="proj reveal">
         <div class="proj__head">
-          <span class="proj__idx mono">16</span>
+          <span class="proj__idx mono">12</span>
           <div class="proj__title">
             <h3>PUDO FAST <span class="tag">Logistics</span></h3>
             <p class="proj__sub">Delivery and parcel tracking application</p>
@@ -637,7 +484,7 @@
         </div>
         <div class="spec">
           <div class="spec__k">Role</div>
-          <div class="spec__v">Mobile Developer (iOS) at Om Tec Web India — intern to full-time.</div>
+          <div class="spec__v">iOS developer — parcel-tracking features and the app&rsquo;s networking layer.</div>
         </div>
         <div class="spec">
           <div class="spec__k">Built</div>
@@ -648,10 +495,9 @@
           <div class="spec__v"><div class="chips"><span class="chip">Swift</span><span class="chip">UIKit</span><span class="chip">Core Location</span><span class="chip">REST APIs</span><span class="chip">MapKit</span></div></div>
         </div>
       </article>
-
       <article class="proj reveal">
         <div class="proj__head">
-          <span class="proj__idx mono">17</span>
+          <span class="proj__idx mono">13</span>
           <div class="proj__title">
             <h3>Sarve me Driver <span class="tag">On-demand</span></h3>
             <p class="proj__sub">Driver-side application for an on-demand platform</p>
@@ -659,7 +505,7 @@
         </div>
         <div class="spec">
           <div class="spec__k">Role</div>
-          <div class="spec__v">Mobile Developer (iOS) at Om Tec Web India.</div>
+          <div class="spec__v">iOS developer — the driver-side app and its live location reporting.</div>
         </div>
         <div class="spec">
           <div class="spec__k">Built</div>
@@ -670,10 +516,9 @@
           <div class="spec__v"><div class="chips"><span class="chip">Swift</span><span class="chip">UIKit</span><span class="chip">Core Location</span><span class="chip">Background modes</span><span class="chip">REST APIs</span></div></div>
         </div>
       </article>
-
       <article class="proj reveal">
         <div class="proj__head">
-          <span class="proj__idx mono">18</span>
+          <span class="proj__idx mono">14</span>
           <div class="proj__title">
             <h3>Blookd <span class="tag">On-demand</span></h3>
             <p class="proj__sub">On-demand services application</p>
@@ -681,7 +526,7 @@
         </div>
         <div class="spec">
           <div class="spec__k">Role</div>
-          <div class="spec__v">Mobile Developer (iOS) at Om Tec Web India.</div>
+          <div class="spec__v">iOS developer — app features, the networking layer and legacy refactoring.</div>
         </div>
         <div class="spec">
           <div class="spec__k">Built</div>
@@ -692,7 +537,6 @@
           <div class="spec__v"><div class="chips"><span class="chip">Swift</span><span class="chip">UIKit</span><span class="chip">REST APIs</span><span class="chip">Legacy refactoring</span></div></div>
         </div>
       </article>
-
     </div>
   </div>
 </section>
@@ -904,6 +748,52 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ================= HONEST SCOPE ================= -->
+<section class="section section--tight" id="scope">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Scope, honestly</p>
+      <h2>What I can do — and what I can't</h2>
+      <p>Every engineer has a boundary. Knowing mine is why the things inside it are reliable.
+         I would rather tell you this now than discover it together in month three.</p>
+    </div>
+
+    <div class="disciplines">
+      <article class="disc reveal">
+        <div class="disc__icon" aria-hidden="true">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h3>Bring me in for this</h3>
+        <ul class="disc__list">
+          <li>Architecting a native iOS app that has to last years, not a sprint</li>
+          <li>Swift Concurrency done correctly — actors, isolation, Sendable, data-race safety</li>
+          <li>Diagnosing what profilers show but logs do not: memory, crashes, failed connections</li>
+          <li>Leading a mobile team and setting the review, QA and release process around it</li>
+          <li>Owning mobile and backend as one system rather than two contracts</li>
+          <li>Release engineering — signing, provisioning, Fastlane, TestFlight, store review</li>
+          <li>Designing SDKs other developers have to integrate without reading the source</li>
+          <li>Building governed AI development pipelines with real review and security gates</li>
+        </ul>
+      </article>
+
+      <article class="disc disc--limits reveal">
+        <div class="disc__icon" aria-hidden="true" style="background:var(--amber-soft);border-color:var(--amber-line);color:var(--amber)">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 8v5"/><circle cx="12" cy="16.5" r="0.6" fill="currentColor"/><path d="M10.3 3.9 2.4 17.4A1.9 1.9 0 0 0 4 20.3h16a1.9 1.9 0 0 0 1.6-2.9L13.7 3.9a1.9 1.9 0 0 0-3.4 0Z"/></svg>
+        </div>
+        <h3>Hire someone else for this</h3>
+        <ul class="disc__list">
+          <li>Brand and visual identity — I build faithfully to a design system, I don't originate one</li>
+          <li>Training or researching ML models — I integrate and ship them on-device, that's the line</li>
+          <li>Distributed systems at planet scale — my backend work is product scale, and I'll say so</li>
+          <li>Native Android as the deepest specialism — I lead and review it; a dedicated Android engineer goes further</li>
+          <li>Game engines — Unity and Unreal are not mine; my game shipped on React Native</li>
+          <li>Embedded firmware — I talk to hardware over BLE, I don't write what runs on it</li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>
